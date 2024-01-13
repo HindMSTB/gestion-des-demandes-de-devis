@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   
+    <link rel="stylesheet" href="css/styleNew.css">
+
+    <style>
+      .partenaires {
+        margin-bottom: 10px; /* Ajustez cette valeur selon vos besoins */
+      }
+    </style>
+    
+
+    
+</head>
+<body>
+
+
+
+
+
+    <nav style="background-color: white; position: fixed; z-index: 999; height: 1.5cm; width: 100%; margin-top: -8px; margin-left: -6px;">
+        <img style="width: 4.6%; margin-left: 48px;" src="img/Logo-IADIS-removebg-preview.png" alt="" title="">
+        <ul>
+     
+            <li><a href="#big-wrapper light">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+                <a href="#services" onclick="toggleSubMenu()">Produits
+                    <i class="fas fa-caret-down"></i>
+                </a>
+                <ul id="subMenu">
+                    <li><a href="index-EPI.html" style="line-height: 50px;">Equipements de protection (EPI)</a></li>
+                    <li><a href="index-Outillages.html" style="text-decoration:none; line-height: 50px;">Outillage à main et électroportatif</a></li>
+                    <li><a href="index-consomable.html" style="line-height: 50px;">Consommables de la maintenance</a></li>
+                    <li><a href="#" style="line-height: 50px; width: 500px;">Levage et manutention</a></li>
+                    <li><a href="#" style="line-height: 50px;  width: 500px;">Pièces de rechange</a></li>
+                    <li><a href="#" style="line-height: 50px;  width: 500px;">Pompes et moteurs</a></li>
+                </ul>
+            </li>
+            <li><a href="devis.php">Demander un devis</a></li>
+            <li><a href="#projects">Contact</a></li>
+            <li><a href="#reviews">FAQ</a></li>
+            <li><a href="login.php"><div class="fas fa-user"></div></a></li>
+            <li>
+                <div class="search-bar">
+                    <input type="text" placeholder="Recherche">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div>
+
+    <div class="sliderHome" style="width: 100%;" >
+        <div class="list">
+            <div class="item"  >
+                <img src="img/pollution-environnement-exterieur-usine-nuit.jpg" alt="">
+                <!--img src="img/pexels-pixabay-236709.jpg" alt=""-->
+                <!--div class="item-text"   class="text-overlay" style=" color: #0f1b6f;">Fourniture industrielle</div-->
+                <div >
+                    <div class="item-text" > 
+                    
+                    <p  style=" color:#ee5c29; text-shadow: 8px 8px 8px#eee;   font-size: 54px;"> IADIS </p> 
+                     
+                     <p  style =" 
+                     font-weight: bold; width: 17cm; text-align: center; font-size: 43px; text-shadow: 8px 8px 8px black;">Des Solutions pour les Industriels</p>
+                       
+                        <a   style="text-decoration: none;font-size: 20px; color: #eee; background-color: #0f1b6f; margin-bottom:6cm;  text-shadow: 8px 8px 8px black;"  href="image/iadis presentation-2.pdf" download><i class="fa fa-download"></i>Télécharger notre Plaquette </a><br>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="item">
+                <img src="img/stock11.jpg">
+                <div class="item-text"  style=" font-weight: bold; width: 17cm; text-align: center; font-size: 45px;
+                 text-shadow: 12px 12px 12px black; " >Fourniture industrielle </div>
+            </div>
+        
+
+            
+            <div class="item">
+                <img src="img/stock1.jpg">
+                <div class="item-text"  style=" font-weight: bold; width: 17cm; text-align: center; font-size: 40px; text-shadow: 8px 8px 8px black; " >Gestion des stocks et des approvisionnements <!--span >en pièces de rechange </span--> </div>
+            </div>
+
+          
+            <!--div class="item">
+                <img src="img/reu.jpg">
+                <div class="item-text"  style=" font-weight: bold; width: 17cm; text-align: center; font-size: 45px;
+                 text-shadow: 12px 12px 12px black; " >Consulting et Accompagnement </div>
+            </div-->
+        
+           
+           
+            <div class="item">
+                <img src="img/mec.jpg">
+                <div class="item-text"  style=" font-weight: bold; width: 17cm; text-align: center; font-size: 45px;
+                 text-shadow: 12px 12px 12px black; " >Fabrication mécanique </div>
+            </div>
+         
+
+            <!--div class="item">
+                <img src="img/mec.jpg">
+                <div class="item-text"  style=" font-weight: bold; width: 17cm; text-align: center; font-size: 45px;
+                 text-shadow: 12px 12px 12px black; " >Formation en maitenance </div>
+            </div-->
+
+        </div>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+
+<section class="about" id="about"  style="padding: 2rem 8%;">
+
+  <h1 class="heading"> à propos de nous</h1>
+
+  <div class="row">
+
+     <div  class="box" class="video">
+        <!--video src="img/" loop muted autoplay></video-->
+        
+
+     </div>
+
+     <div class="content"  style=" margin-top:-1.4cm;">
+        <!--h3>We will provide you the best work which you dreamt for!</h3-->
+        <p  style="font-size: 18px; padding-top:-12cm;">IADIS est une entreprise spécialisée dans la maintenance, la fourniture Industrielle et Automobile.
+           Nous sommes aujourd’hui un partenaire reconnu des grands comptes. Au-delà de la simple distribution,
+           IADIS s'est toujours efforcée de faire évoluer son métier pour pouvoir répondre aux attentes de ses clients.
+           L'expérience de IADIS et la confiance gagnée auprès de grandes entreprises sont les plus belles illustrations de ses
+           capacités et de ses compétences à être bien plus qu’un simple fournisseur, mais un véritable partenaire qui
+           s’engage sur l’optimisation des processus achats de ses clients.</p>
+        <!--a href="#services" class="btn">nos sercices</a-->
+        <h3 style="font-size: 26px;" >Pourquoi nous faire confiance ?</h3>
+     </div>
+
+  </div>
+
+  <!--div class="containerConf">
+
+    <div class="image-boxHome">
+     <img src="image/time.jpg" alt="Votre image 1">
+      <h3  style="font-size: 15px;  text-transform: capitalize; width: 7cm; background-color: aqua; ">Gagner du temps pour le traitement de vos dossiers achats.</h3>
+    </div>
+
+    
+    <div class="image-boxHome">
+      <img src="image/time.jpg" alt="Votre image 1">
+       <h3  style="font-size: 15px;  text-transform: capitalize; width: 7cm; background-color: aqua; ">Gagner du temps pour le traitement de vos dossiers achats.</h3>
+     </div>
+
+     
+    <div class="image-boxHome">
+      <img src="image/time.jpg" alt="Votre image 1">
+       <h3  style="font-size: 15px;  text-transform: capitalize; width: 7cm; background-color: aqua; ">Gagner du temps pour le traitement de vos dossiers achats.</h3>
+     </div>
+
+     
+    <div class="image-boxHome">
+      <img src="image/time.jpg" alt="Votre image 1">
+       <h3  style="font-size: 15px;  text-transform: capitalize; width: 7cm; background-color: aqua; ">Gagner du temps pour le traitement de vos dossiers achats.</h3>
+     </div>
+
+     
+    <div class="image-boxHome">
+      <img src="image/time.jpg" alt="Votre image 1">
+       <h3  style="font-size: 15px;  text-transform: capitalize; width: 7cm; background-color: aqua; ">Gagner du temps pour le traitement de vos dossiers achats.</h3>
+     </div>
+   </div>
+ 
+    <!--div class="image-boxHome">
+      
+      <img src="image/AAHOME.jpg" alt="Votre image 2">
+      <h3>Augmenter vos remises fournisseurs et accroitre la marge de votre entreprise.</h3>
+    </div>
+    <div class="image-boxHome">
+      <h3>Titre de l'image 3</h3>
+      <img src="chemin_vers_votre_image3.jpg" alt="Votre image 3">
+    </div>
+    <div class="image-boxHome">
+      <h3>Titre de l'image 4</h3>
+      <img src="chemin_vers_votre_image4.jpg" alt="Votre image 4">
+    </div>
+    <div class="image-boxHome">
+      <h3>Titre de l'image 5</h3>
+      <img src="chemin_vers_votre_image5.jpg" alt="Votre image 5">
+    </div>
+  </div-->
+  
+  
+    
+  <!--div class="box-container">
+
+     <div class="box">
+        
+        <img style="width: 9ch;" src="image/gagner-du-temps.png" alt="" title="">
+        <p>Gagner du temps pour le traitement de vos dossiers achats.
+        </p>
+     </div>
+  
+     <div class="box">
+       
+        <img style="width: 9ch;" src="image/diagramme-a-bandes.png" alt="" title="">
+        <p>Augmenter vos remises fournisseurs et accroitre la marge de votre entreprise.</p>
+     </div>
+
+     <div class="box">
+        <img style="width: 11ch;" src="image/poignee-de-main.png" alt="" title="">
+        <p>Consolider votre stratégie achat</p>
+     </div>
+
+     <div class="box">
+     
+       
+        <img style="width: 9ch;" src="image/gestion-de-linventaire (1).png" alt="" title="">
+        <p>Gérer efficacement votre budget en stock de pièces.</p>
+     </div>
+
+     <div class="box">
+       
+        <img style="width: 9ch;" src="image/lamelioration-des-processus.png" alt="" title="">
+        <p>Fiabiliser votre outil de production avec un coût optimal.</p>
+  </div>
+
+
+  </div-->
+
+
+
+
+  <div class="contHome">
+   <div class="boxHo">
+       <img src="image/time.jpg" alt="Image 1">
+       <p>Gagner du temps pour le traitement de vos dossiers achats</p>
+   </div>
+   <div class="boxHo">
+       <img src="image/marge-brute-entreprise.jpg" alt="Image 2">
+       <p>Augmenter vos remises fournisseurs et accroitre la marge de votre entreprise</p>
+   </div>
+   <div class="boxHo">
+       <img src="image/achats.jpg" alt="Image 3">
+       <p>Consolider votre stratégie achat</p>
+   </div>
+   <div class="boxHo">
+       <img src="image/gestion-de-stock-entrepot.1.1.webp" alt="Image 4">
+       <p>Gérer efficacement votre budget en stock de pièces</p>
+   </div>
+   <div class="boxHo">
+       <img src="image/cout.jpg" alt="Image 5">
+       <p>Fiabiliser votre outil de production avec un coût optimal</p>
+   </div>
+   
+</div>
+
+
+
+
+
+
+
+
+
+  <!--style=" font-size: 26px; color: #0f1b6f; margin-left: 35px; margin-top: 25px;"   padding-top:-7cm;-->
+
+    
+  <h3  class="partenaires"style="font-size: 26px;  " >Nos partennaires</h3>
+ 
+
+ 
+  <div style="width: 28cm; height:5cm ;" class="AAslider">
+
+    
+     <div class="AAslide-track">  
+    
+    
+      
+        <div    class="AAslide">
+           <img class="simg"  src="img/part11.png" >
+        </div>
+   
+       
+          <div class="AAslide">
+             <img class="simg" src="img/part3.png"  >
+             </div>
+    
+            
+       <div class="AAslide">
+          <img class="simg" src="img/part4.png"  >
+          </div>
+       
+          <div class="AAslide">
+             <img class="simg"  src="img/part5.png"   >
+             </div>
+    
+                   
+       <div class="AAslide">
+          <img class="simg" src="img/part6.png"  >
+          </div>
+                   
+       <div class="AAslide">
+          <img class="simg" src="img/part8.png"  >
+          </div>
+                      
+       <div class="AAslide">
+          <img class="simg" src="img/part9.png"  >
+          </div>
+
+          <div class="AAslide">
+             <img class="simg" src="img/part10.png"  >
+             </div>
+    
+    
+          
+       <div class="AAslide">
+          <img class="simg" src="img/part12.png"  >
+          </div>
+    
+          
+       <div class="AAslide">
+          <img class="simg" src="img/part13.png"  >
+          </div>
+       
+          <div class="AAslide">
+             <img class="simg" src="img/part14.png"  >
+             </div>
+    
+                
+       <div class="AAslide">
+          <img class="simg" src="img/part15.png"  >
+          </div>
+          <div class="AAslide">
+             <img class="simg" src="img/part16.png"  >
+             </div>
+             <!--div class="AAslide">
+                <img class="simg" src="image/outillage.jpg"  >
+                </div>
+                         
+       <div class="AAslide">
+          <img class="simg" src="image/outillage.jpg"  >
+          </div>
+                           
+       <div class="AAslide">
+          <img class="simg" src="image/outillage.jpg"  >
+          </div>
+          <div class="AAslide">
+             <img class="simg" src="image/outillage.jpg"  >
+             </div-->  
+                            
+     </div>
+    
+    </div>
+
+
+
+  </section>
+
+
+
+
+<section class="services" id="services"  style="padding: 5rem 10%;">
+
+    <h1 class="heading"> Nos produits  </h1>
+
+    <div class="container">
+      <div class="box-container">
+
+        <div class="box">
+         
+          <a href="index-EPI.html">
+          <img  class="image" src="image/pro.jpg" alt="">
+          </a>
+         
+          <h3>Equipements de protection (EPI)</h3>
+          <p> <ul class="liste-2-colonnes">
+             <li>Tenues de travail</li>
+             
+             <li>Harnais de sécurité</li>
+             
+             <li>Parka</li>
+             <li>Casque de sécurité</li>
+            
+             <li>Gants chaudronnier</li>
+             <li>Chaussures de sécurité</li>
+             <li>etc</li>
+           </ul>
+           </p>
+        </div>
+
+        <div class="box">
+          <img style="width:60% " src="image/t2.jpg" alt="" >
+          <h3>Outillage à main et électroportatif</h3>
+          <p><ul class="liste-2-colonnes">
+             <li>Clés plates</li>
+             
+             <li>Clés à pipe</li>
+             <li> Clé à molette</li>
+             <li>Marteau</li>
+            
+             <li>Meule</li>
+             <li>Poste à souder</li>
+           
+             <li> boulonneuse</li>
+            
+             <li> etc</li>
+           </ul>
+          </p>
+        </div>
+
+         <div class="box">
+          <img src="image/consommables.jpg" alt="">
+         
+             <h3>Consommables de la maitenance</h3>
+          <p><ul class="liste-2-colonnes">
+         
+             <li> Disques abrasifs</li>
+             
+             <li>lubrifant</li>
+             <li>électrodes de soudage</li>
+             <li> visserie</li>
+             <li>chiffon</li>
+             <li>etc</li>
+            
+          
+           </ul>
+          </p>
+        </div>
+
+      </div>
+
+      <div style="padding-top:18px ;" class="box-container">
+
+       <div class="box">
+         <img style =" height:3.5cm;"src="image/levage.jpg" >
+         <h3>Levage et manutention </h3>
+         <p><ul class="liste-2-colonnes">
+         
+          <li> Crochets</li>
+          
+          <li>manillest</li>
+          <li>sangle de levage</li>
+          <li> treuil</li>
+          
+          <li>etc</li>
+         
+       
+        </ul>
+       </p>
+     </div>
+
+       <div class="box">
+         <img style =" height:3cm;" src="image/rech.jpg">
+         <h3>Pièces de rechange </h3>
+         <p><ul class="liste-2-colonnes">
+      
+          <li>  Roulement</li>
+          
+          <li>Chaine de transmission</li>
+          <li> Poulie</li>
+          <li>Courroie </li>
+          
+          <li>etc</li>
+         
+       
+        </ul>
+       </p>
+       </div>
+
+        <div class="box">
+
+         <img  class= "image" src="image/pompe.jpg" alt="">
+
+         <h3>Pompes et moteurs</h3>
+         <p><ul class="liste-2-colonnes">
+       
+          <li> Pompes Centrifuges</li>
+          
+          <li>à Piston</li>
+          <li> à membrane</li>
+          <li>Moteurs </li>
+          
+          <li> Moto réducteur</li>
+          <li>etc</li>
+       
+        </ul>
+       </p>
+       </div>
+
+      
+     </div>
+    
+
+    </div>
+ </section>
+
+
+
+
+ 
+ <section class="reviews" id="reviews"  style="padding: 5rem 10%;">
+
+  <h1 class="heading"> FAQ </h1>
+
+  <div class="accordion">
+     <h1 style ="color:#0f1b6f">Questions fréquemment posées</h1>
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false">
+        <span  style="font-size: 16px;" class="accordion-title">Est-ce que AMM Industries pour nous accompagner sur les projets maintenance ?</span>
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-content">
+        <p style="font-size: 16px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+          Ut tortor pretium viverra suspendisse potenti.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+     <button id="accordion-button-1" aria-expanded="false">
+       <span  style="font-size: 16px;" class="accordion-title">Est-ce que AMM Industries pour nous accompagner sur les projets maintenance ?</span>
+       <span class="icon" aria-hidden="true"></span>
+     </button>
+     <div class="accordion-content">
+       <p style="font-size: 16px;">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+         incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+         Ut tortor pretium viverra suspendisse potenti.
+       </p>
+     </div>
+   </div>
+
+   <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false">
+        <span  style="font-size: 16px;" class="accordion-title">Est-ce que AMM Industries pour nous accompagner sur les projets maintenance ?</span>
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-content">
+        <p style="font-size: 16px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+          Ut tortor pretium viverra suspendisse potenti.
+        </p>
+      </div>
+    </div>
+
+   <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false">
+        <span  style="font-size: 16px;" class="accordion-title">Est-ce que AMM Industries pour nous accompagner sur les projets maintenance ?</span>
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-content">
+        <p style="font-size: 16px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+          Ut tortor pretium viverra suspendisse potenti.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false">
+        <span  style="font-size: 16px;" class="accordion-title">Est-ce que AMM Industries pour nous accompagner sur les projets maintenance ?</span>
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-content">
+        <p style="font-size: 16px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+          Ut tortor pretium viverra suspendisse potenti.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+<div class="about"  style="padding: 5rem 10%;">
+
+    <h1 class="heading"> Contact </h1>
+    <div class="box-container"  >
+ 
+       <div class="box" >
+          <h3 > <i class="fas fa-map-marker-alt"></i>
+          </h3>
+          <p> Adresse </p>
+          <p>
+            <a href="https://www.google.com/maps/place/IADIS/@33.5939478,-7.5452506,19z/data=!4m12!1m5!3m4!2zMzPCsDM1JzM4LjEiTiA3wrAzMic0Mi41Ilc!8m2!3d33.5939167!4d-7.5451389!3m5!1s0x21e0b16ac5fe0e43:0x672d2e427b7a2e4!8m2!3d33.5939279!4d-7.5447659!16s%2Fg%2F11t34tnp2"
+              target="_blank">
+              <span style="color:#0f1b6f">
+                120, Boulevard la grande ceinture lilya 2 N° 48, Casablanca
+              </span>
+            </a>
+          </p>
+          
+         
+            </div>
+     
+          
+    
+       <div class="box">
+          <h3><i class="fas fa-phone"></i>
+           </h3>
+           <p> Téléphone </p>
+          <p ><a href="tel:0522356853"> <span style="color:#0f1b6f"> +212 522 356 853 </span></a></p>
+       </div>
+ 
+       <div class="box">
+          <h3><i class="fas fa-envelope"></i>
+          </h3>
+          <p> Email</p>
+          <p><a href="mailto:Contact@iadis.ma"> <span style="color:#0f1b6f"> Contact@iadis.ma</span></a></p>
+       </div>
+       <div class="box">
+          <h3><i class="fas fa-globe"></i>
+          </h3>
+          <p> Web</p>
+          <p><a href="https://iadis.ma/"> <span style="color:#0f1b6f">www.iadis.ma</span></a></p>
+       </div>
+ 
+       
+    </div>
+ 
+</div>
+ 
+
+ 
+
+<footer class="footer" id="footer">
+    <div class="containerF">
+       <div class="row">
+          <div class="footer-col">
+            
+              <img style="width: 25%" src="image/Logo-IADIS-removebg-preview.png" alt="" title="">
+             <p style="font-size: 16px; color: #0f1b6f;">
+              IADIS,une entreprise spécialisé dans la maintenance et la fourniture industrielle et automobile. 
+             </p>
+          </div>
+          <div class="footer-col">
+             <h4>LIENS UTILES</h4>
+             <ul>
+ 
+                <li> <a href="#home">home</a></li>
+                   <li> <a href="#about">Qui sommes-nous </a></li>
+                      <li> <a href="#services">produits</a></li>
+                         <li> <a href="#projects">Services</a></li>
+                            <li> <a href="#footer">contact</a></li>
+                               <li> <a href="#reviews">FAQ</a></li>
+                
+             </ul>
+          </div>
+          <div class="footer-col">
+             <h4>CONTACT</h4>
+           
+ 
+             <p style="font-size: 2.5ch;color: #0f1b6f;"> <i class="fas fa-map-marker-alt"></i> 120, Boulvard la grande ceinture lilya 2 N° 48, Casablanca  </p> 
+             <p style="font-size: 2.5ch;color: #0f1b6f;"><i class="fas fa-phone"></i> +212 522 356 853 </p> 
+       <p style="font-size: 2.5ch;color: #0f1b6f;"> <i class="fas fa-envelope"></i> Contact@iadis.ma </p>  
+       <p style="font-size: 2.5ch;color: #0f1b6f;"><i class="fas fa-globe"></i> www.iadis.ma </p> 
+ 
+          </div>
+          <div class="footer-col">
+             <h4>RÉSEAUX SOCIAUX</h4>
+             <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+ 
+ 
+ 
+ 
+ <!-- hada dial les reunions>
+<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
+<script>var widget = new SimplybookWidget({"widget_type":"button","url":"https:\/\/ammindustries.simplybook.me","theme":"bookingtroll","theme_settings":{"timeline_hide_unavailable":"0","timeline_show_end_time":"0","timeline_modern_display":"as_slots","sb_base_color":"#009cff","display_item_mode":"block","dark_font_color":"#2d3a58","light_font_color":"#ffffff","btn_color_1":"#ff3f6c","sb_company_label_color":"#ffffff","hide_img_mode":"0","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"predefined":[]},"button_title":"Prenez-RDV !","button_background_color":"#ff751a","button_text_color":"#ffffff","button_position":"left","button_position_offset":"30%"});</script>
+
+
+<!--fin renions-->
+
+ 
+ 
+
+
+
+
+
+ <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bc040470-1b75-4841-ae43-d21601fcfe5c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+   
+ <script src="js/app.js"></script>
+</body>
+</html>

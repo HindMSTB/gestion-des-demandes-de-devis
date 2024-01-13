@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style-test-epi.css">
+
+   <!-- custom js file link  -->
+   <script src="js/script-EPI.js" defer></script>
+
+   <style> 
+    a:link 
+   { 
+    text-decoration:none; 
+   } 
+
+
+   
+      html::-webkit-scrollbar {
+     width: 1rem;
+   }
+   
+   html::-webkit-scrollbar-track {
+     background: transparent;
+   }
+   
+   html::-webkit-scrollbar-thumb {
+     background:#ee5c29; 
+   }
+
+   
+   
+nav .logo{
+   color: white;
+   font-size: 33px;
+   font-weight: bold;
+   line-height: 70px;
+   padding-left: 110px;
+ }
+ nav{
+   height: 70px;
+   
+   box-shadow: 0 3px 15px rgba(0,0,0,.4);
+ }
+ nav ul{
+   float: right;
+   margin-right: 30px;
+
+ }
+ 
+ nav ul li{
+   display: inline-block;
+ }
+
+ nav ul li a{
+   color:#ee5c29;
+   display: block;
+   padding: 0 20px;
+   line-height: 70px;
+   font-size: 20px;
+   background: white;
+   
+   transition: .5s;
+  
+   
+ }
+
+ nav ul li a:hover,
+ nav ul li a.active{
+   color: #0f1b6f;
+ }
+
+ nav ul ul{
+   position: absolute;
+   top: 85px;
+   border-top: 3px solid #0f1b6f;
+   opacity: 0;
+   visibility: hidden;
+  
+ }
+ nav ul li:hover > ul{
+   top: 70px;
+   opacity: 1;
+   visibility: visible;
+   transition: .3s linear;
+ }
+ nav ul ul li{
+   width: 150px;
+   display: list-item;
+   position: relative;
+   border: 1px solid rgb(255, 253, 253);
+  
+   border-top: none;
+   z-index: 999;
+ }
+ nav ul ul li a{
+   line-height: 50px;
+   z-index: 9999;
+
+
+ }
+ nav ul ul ul{
+   border-top: none;
+  
+ }
+ nav ul ul ul li{
+   position: relative;
+   top: -70px;
+   left: 150px;
+   z-index: 9999;
+ }
+ nav ul ul li a i{
+   margin-left: 45px;
+
+ }
+ 
+ 
+.naviVerF{
+ 
+   font-size: 4rem;
+   color: var(--black);
+   text-transform: capitalize;
+  
+
+}
+
+   </style>
+
+</head>
+<body>
+   
+
+   
+   <header>
+      <nav  style="background-color:white;">
+        
+         <img style="width: 6% ; margin-left:48px "  src="image/Logo-IADIS-removebg-preview.png" alt="" title="">
+         <ul >
+            <li ><a  href="index.html#big-wrapper light">Home</a></li>
+            <li><a href="index.html#about" >About</a></li>
+                
+            <li >
+               <a href="index.html#services">Produits
+               <i class="fas fa-caret-down"></i>
+               </a>
+
+               <ul>
+                  <li ><a href="index-EPI.html" style=" line-height: 50px;  width: 500px; border:6px solid white;">Equipements de protection (EPI)</a></li>
+                  <li><a href="" style=" line-height: 50px;  width: 500px; border: 4px solid white; ">Outillage à main et électroportatif</a></li>
+                  <li><a href=""style=" line-height: 50px;  width: 500px; border: 4px solid white; ">Consommables de la maintenance</a></li>
+                  <li><a href=""style=" line-height: 50px;  width: 500px; border: 4px solid white; ">Levage et manutention </a></li>
+                  <li><a href=""style=" line-height: 50px;  width: 500px; border: 4px solid white; ">Pièces de rechange</a></li>
+                  <li><a href="index.html#about"style=" line-height: 50px;  width: 500px; border: 4px solid white; ">Pompes et moteurs</a></li>
+       
+               </ul>
+            </li>
+
+            <li><a href="devis.php">Demander un devis</a></li>
+            <li><a href="index.html#projects">Contact</a></li>
+            <li><a href="index.html#reviews">FAQ</a></li>
+        
+            <li><a href="login.php"> 
+               <div  class="fas fa-user"> </div>
+               
+                </a> 
+      
+
+         </ul>
+         
+     </nav>
+      
+  </header>
+
+     
+<!--code:AZERTY123-->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bc040470-1b75-4841-ae43-d21601fcfe5c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+       
+
+
+<div class="container" style="padding-top:1cm;">
+
+   <h3 class="title">Outillage À Main Et Électroportatif</h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-1">
+         <img src="image/outillage/jeu-de-cles-mixtes-a-cliquet-metrique-7-pieces.jpg" alt="">
+         <h3 style="font-size:16px;">Clés plates</h3>
+         <!--div class="price">$2.00</div-->
+      </div>
+
+      <div class="product" data-name="p-2">
+        <img src="image/outillage/boulonneuse.png" alt="">
+         <h3 style="font-size:16px;">boulonneuse</h3>
+      
+      </div>
+
+      <div class="product" data-name="p-3">
+         <img src="image/outillage/Clé à molette.jpg" alt="">
+       <h3 style="font-size:16px;"> Clé à molette </h3>
+      </div>
+
+      <div class="product" data-name="p-4">
+       <img src="image/outillage/Clés à pipe.jpg" alt="">
+         <h3 style="font-size:16px;">Clés à pipe</h3>
+        
+      </div>
+
+      <div class="product" data-name="p-5">
+        <img src="image/outillage/petit-marteau-a-clous-1.jpeg" alt="">
+         <h3 style="font-size:16px;">Marteau</h3>
+       
+      </div>
+
+      <div class="product" data-name="p-6">
+      <img src="image/outillage/Meule.jpg" alt="">
+         <h3 style="font-size:16px;">Meuleuse</h3>
+        
+      </div>
+
+     
+         <!--div class="product" data-name="p-6">
+            <img src="image/outillage/Poste à souder.jpg" alt="">
+               <h3 style="font-size:16px;"> </h3>
+   </div-->
+ 
+   <div class="product" data-name="p-6">
+      <img src="image/outillage/Aspirateur sans fil.avif" alt="">
+         <h3 style="font-size:16px;">Aspirateur sans fil</h3>
+</div> 
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Cloueur sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Cloueur sans filr</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Découpeur-ponceur multifonction sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Découpeur-ponceur multifonction sans fil</h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Lampe sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Lampe sans fil</h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Coffret outillage électroportatif sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Coffret outillage électroportatif sans fil</h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Perceuse-visseuse sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Perceuse-visseuse sans fil</h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Perceuse à percussion sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Perceuse à percussion sans fil</h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Perforateur sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Perforateur sans fil</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Rabot sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Rabot sans fil </h3>
+</div>
+
+
+<!--div class="product" data-name="p-6">
+   <img src="image/outillage/" alt="">
+      <h3 style="font-size:16px;"> Radio sans fil</h3>
+</div-->
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie à coupe d'onglet sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Scie à coupe d'onglet sans fil </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie à ruban sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Scie à ruban sans fil </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie circulaire sans fil.jpg" alt="">
+      <h3 style="font-size:16px;">Scie circulaire sans fil </h3>
+</div>
+
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie sabre sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Scie sabre sans fil </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie sauteuse sans fil.avif" alt="">
+      <h3 style="font-size:16px;"> Scie sauteuse sans fil</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Tournevis et visseuse sans fil.avif" alt="">
+      <h3 style="font-size:16px;"> Tournevis et visseuse sans fil</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Visseuse à choc sans fil.avif" alt="">
+      <h3 style="font-size:16px;">Visseuse à choc sans fil </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Affleureuse filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Affleureuse filaire</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Cisaille filaire.avif" alt="">
+      <h3 style="font-size:16px;">Cisaille filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Décapeur thermique filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Décapeur thermique filaire</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Découpeur-ponceur multifonction filaire.avif" alt="">
+      <h3 style="font-size:16px;">Découpeur-ponceur multifonction filaire </h3>
+</div>
+
+<!--div class="product" data-name="p-6">
+   <img src="image/outillage/Meuleuse droite" alt="">
+      <h3 style="font-size:16px;"> Meuleuse droite </h3>
+</div-->
+
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Perceuse à percussion filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Perceuse à percussion filaire</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Perceuse filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Perceuse filaire</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Ponceuse filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Ponceuse filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Rabot filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Rabot filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Rainureuse à béton filaire.avif" alt="">
+      <h3 style="font-size:16px;"> Rainureuse à béton filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie circulaire filaire.avif" alt="">
+      <h3 style="font-size:16px;">Scie circulaire filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie sabre filaire.avif" alt="">
+      <h3 style="font-size:16px;">Scie sabre filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie sauteuse filaire.avif" alt="">
+      <h3 style="font-size:16px;">Scie sauteuse filaire </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Couteau, cutter et lame.jpg" alt="">
+      <h3 style="font-size:16px;">Couteau, cutter et lame </h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Douille et cliquet.avif" alt="">
+      <h3 style="font-size:16px;">Douille et cliquet </h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Ébavureur et lime.avif" alt="">
+      <h3 style="font-size:16px;">Ébavureur et lime</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Martellerie et outils de frappe.avif" alt="">
+      <h3 style="font-size:16px;">Martellerie et outils de frappe </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Pince.avif" alt="">
+      <h3 style="font-size:16px;">Pince</h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Scie et accessoires.jpg" alt="">
+      <h3 style="font-size:16px;">Scie et accessoires </h3>
+</div>
+
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Composition d'outils.avif" alt="">
+      <h3 style="font-size:16px;">Composition d'outils </h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Extracteur.avif" alt="">
+      <h3 style="font-size:16px;">Extracteur </h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Outils multifonctions.avif" alt="">
+      <h3 style="font-size:16px;">Outils multifonctions </h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Sauterelle.avif" alt="">
+      <h3 style="font-size:16px;">Sauterelle </h3>
+</div>
+<div class="product" data-name="p-6">
+   <img src="image/outillage/Presse et serre-joint.avif" alt="">
+      <h3 style="font-size:16px;">Presse et serre-joint </h3>
+</div>
+
+</div>
+
+
+
+<footer class="footer" style="font-size:10px;" id="footer">
+   <div class="containerF">
+      <div class="row">
+         <div class="footer-col">
+           
+             <img style="width: 25%" src="image/Logo-IADIS-removebg-preview.png" alt="" title="">
+            <p style="font-size: 16px; color: #0f1b6f;">
+             IADIS,une entreprise spécialisé dans la maintenance et la fourniture industrielle et automobile. 
+            </p>
+         </div>
+         <div class="footer-col">
+            <h4>LIENS UTILES</h4>
+            <ul>
+
+               <li> <a href="#home">home</a></li>
+                  <li> <a href="#about">Qui sommes-nous </a></li>
+                     <li> <a href="#services">produits</a></li>
+                        <li> <a href="#projects">Services</a></li>
+                           <li> <a href="#footer">contact</a></li>
+                              <li> <a href="#reviews">FAQ</a></li>
+               
+            </ul>
+         </div>
+         <div class="footer-col">
+            <h4>CONTACT</h4>
+          
+
+            <p style="font-size: 2.5ch;color: #0f1b6f;"> <i class="fas fa-map-marker-alt"></i> 120, Boulvard la grande ceinture lilya 2 N° 48, Casablanca  </p> 
+            <p style="font-size: 2.5ch;color: #0f1b6f;"><i class="fas fa-phone"></i> +212 522 356 853 </p> 
+      <p style="font-size: 2.5ch;color: #0f1b6f;"> <i class="fas fa-envelope"></i> Contact@iadis.ma </p>  
+      <p style="font-size: 2.5ch;color: #0f1b6f;"><i class="fas fa-globe"></i> www.iadis.ma </p> 
+
+         </div>
+         <div class="footer-col">
+            <h4>RÉSEAUX SOCIAUX</h4>
+            <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+</body>
+</html>

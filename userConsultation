@@ -1,0 +1,188 @@
+
+  <div class="container mt-4">
+
+    <div class="row" id="my-row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4> Listes des entreprises
+                   
+                       
+                    </h4>
+                </div>
+                <div class="card-body"  >
+
+                    <table class="table table-bordered table-striped" >
+                       
+                            <thead>
+                            <tr>
+                               <th >Nom de l'entreprise </th>
+                                <th style="text-align: center;">Consultation en attente</th>
+                                <th style="text-align: center;">Consultation en cours </th>
+                                <th style="text-align: center;"> Consultation traitée </th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+
+                       
+
+                        <?php 
+$query = "SELECT DISTINCT nomEntreprise FROM consultation";
+$query_run = mysqli_query($con, $query);
+
+if(mysqli_num_rows($query_run) > 0) {
+    foreach($query_run as $consultation) {
+        $entreprise = $consultation['nomEntreprise'];
+        ?>
+        <tr>
+        <td ><?= $entreprise; ?></td>
+            <td style="text-align: center;">
+                <?php
+                $query = "SELECT COUNT(*) AS nombre_consultations FROM consultation WHERE etat = 'non traitée' AND nomEntreprise = '$entreprise'";
+                $query_run = mysqli_query($con, $query);
+
+                if ($query_run) {
+                    while ($row = mysqli_fetch_assoc($query_run)) {
+                        $nombre_consultations = $row['nombre_consultations'];
+                        echo $nombre_consultations;
+                    }
+                } 
+                ?>
+
+
+
+
+            </td>
+
+            <td style="text-align: center;" >
+          
+                <?php
+                $query = "SELECT COUNT(*) AS nombre_consultations FROM consultation WHERE etat = 'en cours' AND nomEntreprise = '$entreprise'";
+                $query_run = mysqli_query($con, $query);
+
+                if ($query_run) {
+                    while ($row = mysqli_fetch_assoc($query_run)) {
+                        $nombre_consultations = $row['nombre_consultations'];
+                        echo $nombre_consultations;
+                    }
+                }
+                ?>
+            </td>
+
+            <td style="text-align: center;">
+                <?php
+                $query = "SELECT COUNT(*) AS nombre_consultations FROM consultation WHERE etat = 'Terminé' AND nomEntreprise = '$entreprise'";
+                $query_run = mysqli_query($con, $query);
+
+                if ($query_run) {
+                    while ($row = mysqli_fetch_assoc($query_run)) {
+                        $nombre_consultations = $row['nombre_consultations'];
+                        echo $nombre_consultations;
+                    }
+                } 
+                ?>
+            </td>
+
+            <td style="text-align: center;">
+
+            <?php
+            // Sélectionner les IDs de consultations pour une entreprise donnée
+        $query_ids = "SELECT id FROM consultation WHERE nomEntreprise = '$entreprise'";
+        $query_ids_run = mysqli_query($con, $query_ids);
+        
+        if ($query_ids_run) {
+            $idSc = mysqli_fetch_array($query_ids_run);
+       
+
+
+
+        ?>
+          
+        <td style="text-align: center;">
+        <?php
+        // Sélectionner les IDs de consultations pour une entreprise donnée
+        $query_ids = "SELECT id FROM consultation WHERE nomEntreprise = '$entreprise'";
+        $query_ids_run = mysqli_query($con, $query_ids);
+
+        if ($query_ids_run) {
+            $idSc = mysqli_fetch_array($query_ids_run);
+        }
+        ?>
+        <a onclick="openModal('<?= $entreprise; ?>')" style="font-size: 0.9rem; background-color: #eee; color: black;">
+            <i class="fas fa-list"></i>
+        </a>
+    </td>
+</tr>
+
+
+<div id="myModal" class="modal">
+<div class="modal-content">
+<h3 id="modal-entreprise"></h3>
+<a href="EntreprisesNewCons.php?entreprise=<?= $entreprise; ?>">Nouvelles consultations</a>
+<a href="page2.php">Consultations en cours</a>
+<a href="page3.php">Consultations terminées</a>
+<button onclick="closeModal()">Fermer</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<?php
+    
+    
+} else {
+    echo 'Aucune entreprise trouvée.';
+}
+?>
+
+<script>
+function openModal(entreprise) {
+var modal = document.getElementById("myModal");
+modal.style.display = "block";
+document.getElementById("modal-entreprise").innerHTML = entreprise;
+}
+
+function closeModal() {
+var modal = document.getElementById("myModal");
+modal.style.display = "none";
+}
+
+</script>
+</tbody>
+</table>
+</body>
+
+
+
+
+
+<a onclick="openModal('<?= $entreprise; ?>')" style="font-size: 0.9rem; background-color: #eee; color: black;">
+    <i class="fas fa-list"></i>
+</a>
+<?php
+$query_ent = "SELECT nomEntreprise FROM consultation WHERE nomEntreprise = '$entreprise'";
+$query_ent_run = mysqli_query($con, $query_ent);
+
+if ( $query_ent_run) 
+$entre = mysqli_fetch_array($query_ent_run);
+
+?>                      <div id="myModal" class="modal">
+<div class="modal-content">
+<h3 id="modal-entreprise"></h3>
+<a href="EntreprisesNewCons.php?entreprise=<?= $entre[0];?>">Nouvelles consultations</a>
+<a href="page2.php">Consultations en cours</a>
+<a href="page3.php">Consultations terminées</a>
+<button onclick="closeModal()">Fermer</button>
+</div>
+</div> 
+
+
+
